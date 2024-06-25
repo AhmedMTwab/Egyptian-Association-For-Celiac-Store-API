@@ -1,0 +1,6 @@
+@Egyptian_association_of_cieliac_patients_api_HostAddress = http://localhost:5042
+
+GET {{Egyptian_association_of_cieliac_patients_api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
