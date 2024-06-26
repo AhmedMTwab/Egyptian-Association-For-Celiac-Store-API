@@ -1,5 +1,6 @@
 using Egyptian_association_of_cieliac_patients_api.Models;
 using Egyptian_association_of_cieliac_patients_api.Repositories;
+using Microsoft.AspNetCore.Cors.Infrastructure;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -15,6 +16,8 @@ builder.Services.AddDbContext<EgyptianAssociationOfCieliacPatientsContext>(optio
 {
     options.UseLazyLoadingProxies().UseSqlServer(CS);
 });
+builder.Services.AddCors(CorsOptions=> CorsOptions.AddPolicy("MyPolicy",
+    CorsPolicyBuilder => CorsPolicyBuilder.AllowAnyMethod().AllowAnyHeader().AllowAnyOrigin()));
 
 builder.Services.AddScoped<ICRUDRepo<Patient>, MainRepository<Patient>>();
 builder.Services.AddScoped<ICRUDRepo<AssosiationBranch>, MainRepository<AssosiationBranch>>();
@@ -38,7 +41,9 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-
+app.UseStaticFiles();
+app.UseCors("MyPolicy");
+app.UseRouting();
 app.UseAuthorization();
 
 app.MapControllers();
