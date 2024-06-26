@@ -16,9 +16,17 @@ builder.Services.AddDbContext<EgyptianAssociationOfCieliacPatientsContext>(optio
     options.UseLazyLoadingProxies().UseSqlServer(CS);
 });
 
+builder.Services.AddScoped<ICRUDRepo<Patient>, MainRepository<Patient>>();
+builder.Services.AddScoped<ICRUDRepo<AssosiationBranch>, MainRepository<AssosiationBranch>>();
+builder.Services.AddScoped<ICRUDRepo<Dises>, MainRepository<Dises>>();
 builder.Services.AddScoped<ICRUDRepo<Doctor>, MainRepository<Doctor>>();
 builder.Services.AddScoped<ICRUDRepo<Clinic>, MainRepository<Clinic>>();
-
+builder.Services.AddScoped<ICRUDRepo<HealthInsurance>, MainRepository<HealthInsurance>>();
+builder.Services.AddScoped<ICRUDRepo<Pharmacy>, MainRepository<Pharmacy>>();
+builder.Services.AddScoped<ICRUDRepo<Lab>, MainRepository<Lab>>();
+builder.Services.AddScoped<ICRUDRepo<Hospital>, MainRepository<Hospital>>();
+builder.Services.AddScoped<ICRUDRepo<Product>, MainRepository<Product>>();
+builder.Services.AddScoped<ICRUDRepo<RawMaterial>, MainRepository<RawMaterial>>();
 
 var app = builder.Build();
 

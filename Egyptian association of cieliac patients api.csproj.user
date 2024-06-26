@@ -3,5 +3,7 @@
   <PropertyGroup>
     <ActiveDebugProfile>https</ActiveDebugProfile>
     <NameOfLastUsedPublishProfile>D:\graduation-project\api\Egyptian association of cieliac patients api\Properties\PublishProfiles\site5951-WebDeploy.pubxml</NameOfLastUsedPublishProfile>
+    <Controller_SelectedScaffolderID>ApiControllerEmptyScaffolder</Controller_SelectedScaffolderID>
+    <Controller_SelectedScaffolderCategoryPath>root/Common/Api</Controller_SelectedScaffolderCategoryPath>
   </PropertyGroup>
 </Project>

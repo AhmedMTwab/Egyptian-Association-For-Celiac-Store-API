@@ -8,61 +8,72 @@ namespace Egyptian_association_of_cieliac_patients_api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class DoctorController : ControllerBase
+    public class doctorController : ControllerBase
     {
         private readonly ICRUDRepo<Doctor> doctor_Crud;
         private readonly ICRUDRepo<Clinic> clinicRepo;
 
-        public DoctorController(ICRUDRepo<Doctor> Doctor_crud, ICRUDRepo<Clinic> ClinicRepo)
+        public doctorController(ICRUDRepo<Doctor> doctor_crud, ICRUDRepo<Clinic> ClinicRepo)
         {
-            doctor_Crud = Doctor_crud;
+            doctor_Crud = doctor_crud;
             clinicRepo = ClinicRepo;
         }
         [HttpGet]
         public IActionResult Index()
         {
             var doctors = doctor_Crud.FindAll();
-            List<DoctorDto> doctorDtos = new List<DoctorDto>();
-            foreach (var doctor in doctors)
+            List<DoctorDto> DoctorDtos = new List<DoctorDto>();
+            if (doctors != null)
             {
-                DoctorDto doctorDto = new DoctorDto();
-                doctorDto.doctorid = doctor.DoctorId;
-                doctorDto.DoctorName = doctor.Name;
-                doctorDto.DoctorMajor = doctor.Major;
-                foreach (DoctorPhone phone in doctor.DoctorPhones)
+                foreach (var doctor in doctors)
                 {
-                    doctorDto.PhoneNumbers.Add(phone.PhoneNumber);
+                    DoctorDto DoctorDto = new DoctorDto();
+                    DoctorDto.doctorid = doctor.DoctorId;
+                    DoctorDto.DoctorName = doctor.Name;
+                    DoctorDto.DoctorMajor = doctor.Major;
+                    foreach (DoctorPhone phone in doctor.DoctorPhones)
+                    {
+                        DoctorDto.PhoneNumbers.Add(phone.PhoneNumber);
+                    }
+                    foreach (DoctorClinicWork clinic in doctor.clinics)
+                    {
+                        DoctorDto.ClinicNames.Add(clinic.Clinic.Name);
+                        DoctorDto.ClinicArrivalTimes.Add(clinic.ArriveTime.ToTimeSpan());
+                        DoctorDto.ClinicLeaveTimes.Add(clinic.LeaveTime.ToTimeSpan());
+                    }
+                    DoctorDtos.Add(DoctorDto);
                 }
-                foreach (DoctorClinicWork clinic in doctor.clinics)
-                {
-                    doctorDto.ClinicNames.Add(clinic.Clinic.Name);
-                    doctorDto.ClinicArrivalTimes.Add(clinic.ArriveTime.ToTimeSpan());
-                    doctorDto.ClinicLeaveTimes.Add(clinic.LeaveTime.ToTimeSpan());
-                }
-                doctorDtos.Add(doctorDto);
+                return Ok(DoctorDtos);
             }
-            return Ok(doctorDtos);
+            else { return NotFound(); }
         }
         [HttpGet("{id:int}", Name = "GetOneDocRoute")]
         public IActionResult Details(int id)
         {
-            var doctor = doctor_Crud.FindById(id, "DoctorPhones", "clinics");
-            DoctorDto doctorDto = new DoctorDto();
-            doctorDto.doctorid = doctor.DoctorId;
-            doctorDto.DoctorName = doctor.Name;
-            doctorDto.DoctorMajor = doctor.Major;
-            foreach(DoctorPhone phone in doctor.DoctorPhones)
+            var doctor = doctor_Crud.FindById(id);
+            DoctorDto DoctorDto = new DoctorDto();
+            if (doctor != null)
             {
-                doctorDto.PhoneNumbers.Add(phone.PhoneNumber);
-            }
-            foreach(DoctorClinicWork clinic in doctor.clinics)
-            {
-                doctorDto.ClinicNames.Add(clinic.Clinic.Name);
-                doctorDto.ClinicArrivalTimes.Add(clinic.ArriveTime.ToTimeSpan());
-                doctorDto.ClinicLeaveTimes.Add(clinic.LeaveTime.ToTimeSpan());
-            }
+                DoctorDto.doctorid = doctor.DoctorId;
+                DoctorDto.DoctorName = doctor.Name;
+                DoctorDto.DoctorMajor = doctor.Major;
+                foreach (DoctorPhone phone in doctor.DoctorPhones)
+                {
+                    DoctorDto.PhoneNumbers.Add(phone.PhoneNumber);
+                }
+                foreach (DoctorClinicWork clinic in doctor.clinics)
+                {
+                    DoctorDto.ClinicNames.Add(clinic.Clinic.Name);
+                    DoctorDto.ClinicArrivalTimes.Add(clinic.ArriveTime.ToTimeSpan());
+                    DoctorDto.ClinicLeaveTimes.Add(clinic.LeaveTime.ToTimeSpan());
+                }
 
-            return Ok(doctorDto);
+                return Ok(DoctorDto);
+            }
+            else
+            {
+                return NotFound();
+            }
         }
     }
 }
