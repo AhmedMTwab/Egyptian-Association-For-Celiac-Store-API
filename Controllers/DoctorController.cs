@@ -3,6 +3,7 @@ using Egyptian_association_of_cieliac_patients_api.DTO;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Egyptian_association_of_cieliac_patients_api.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Egyptian_association_of_cieliac_patients_api.Controllers
 {

@@ -1,7 +1,11 @@
 using Egyptian_association_of_cieliac_patients_api.Models;
 using Egyptian_association_of_cieliac_patients_api.Repositories;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Cors.Infrastructure;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
+using Microsoft.OpenApi.Models;
+using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,7 +14,36 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.AddSwaggerGen(opt =>
+opt.SwaggerDoc("v1", new OpenApiInfo { Title = "MyAPI", Version = "v1" }));
+builder.Services.AddSwaggerGen(opt =>
+{
+    opt.SwaggerDoc("v2", new OpenApiInfo { Title = "AuthAPI", Version = "v2" });
+    opt.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+    {
+        In = ParameterLocation.Header,
+        Description = "Please enter token",
+        Name = "Authorization",
+        Type = SecuritySchemeType.Http,
+        BearerFormat = "JWT",
+        Scheme = "bearer"
+    });
+
+    opt.AddSecurityRequirement(new OpenApiSecurityRequirement
+    {
+        {
+            new OpenApiSecurityScheme
+            {
+                Reference = new OpenApiReference
+                {
+                    Type=ReferenceType.SecurityScheme,
+                    Id="Bearer"
+                }
+            },
+            new string[]{}
+        }
+    });
+});
 var CS = builder.Configuration.GetConnectionString("DefaultConnection");
 builder.Services.AddDbContext<EgyptianAssociationOfCieliacPatientsContext>(options =>
 {
@@ -18,7 +51,27 @@ builder.Services.AddDbContext<EgyptianAssociationOfCieliacPatientsContext>(optio
 });
 builder.Services.AddCors(CorsOptions=> CorsOptions.AddPolicy("MyPolicy",
     CorsPolicyBuilder => CorsPolicyBuilder.AllowAnyMethod().AllowAnyHeader().AllowAnyOrigin()));
-
+var ValidIssur = builder.Configuration["JWT:Issuer"];
+var ValidAudiance = builder.Configuration["JWT:Audiance"];
+var ValidKey = builder.Configuration["JWT:SecretKey"];
+builder.Services.AddAuthentication(options =>
+{
+    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+    options.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
+}).AddJwtBearer(options =>
+{
+    options.SaveToken = true;
+    options.RequireHttpsMetadata = true;
+    options.TokenValidationParameters = new TokenValidationParameters()
+    {
+        ValidateIssuer = true,
+        ValidIssuer = ValidIssur,
+        ValidateAudience = true,
+        ValidAudience = ValidAudiance,
+        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(ValidKey))
+    };
+});
 builder.Services.AddScoped<ICRUDRepo<Patient>, MainRepository<Patient>>();
 builder.Services.AddScoped<ICRUDRepo<AssosiationBranch>, MainRepository<AssosiationBranch>>();
 builder.Services.AddScoped<ICRUDRepo<Dises>, MainRepository<Dises>>();
@@ -44,6 +97,7 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseCors("MyPolicy");
 app.UseRouting();
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();
