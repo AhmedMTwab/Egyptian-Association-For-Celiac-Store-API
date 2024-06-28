@@ -33,7 +33,7 @@ namespace Egyptian_association_of_cieliac_patients_api.Controllers
                     if(patient.Dob.Year.ToString() == logindata.Password)
                     {
                         var claims=new List<Claim>();
-                        claims.Add(new Claim("ID",patient.PatientId.ToString()));
+                        claims.Add(new Claim("ID",patient.PatientId.ToString(),"int"));
                         claims.Add(new Claim(JwtRegisteredClaimNames.Jti,Guid.NewGuid().ToString()));
                         SecurityKey securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(config["JWT:SecretKey"]));
                         SigningCredentials signincred=new SigningCredentials(securityKey,SecurityAlgorithms.HmacSha256);

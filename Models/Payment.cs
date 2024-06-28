@@ -19,4 +19,7 @@ public partial class Payment
 
     [Column("total_paid", TypeName = "money")]
     public decimal TotalPaid { get; set; }
+    public int OrderId { get; set; }
+    [ForeignKey("OrderId")]
+    public virtual Order Order { get; set; }
 }

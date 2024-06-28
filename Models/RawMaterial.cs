@@ -23,7 +23,8 @@ public partial class RawMaterial
 
     [Column("price", TypeName = "money")]
     public decimal Price { get; set; }
-
+    [Column("orderid")]
+    public int OrderId { get; set; }
 
     [InverseProperty("Material")]
     public virtual ICollection<RawMaterialImage> Images { get; set; } = new List<RawMaterialImage>();
@@ -33,4 +34,7 @@ public partial class RawMaterial
 
     [InverseProperty("Material")]
     public virtual ICollection<PatientRawmaterialVeiw> patients { get; set; } = new List<PatientRawmaterialVeiw>();
+    [ForeignKey("OrderId")]
+    [InverseProperty("Matrerials")]
+    public virtual Order? Order { get; set; }
 }

@@ -50,7 +50,7 @@ builder.Services.AddDbContext<EgyptianAssociationOfCieliacPatientsContext>(optio
     options.UseLazyLoadingProxies().UseSqlServer(CS);
 });
 builder.Services.AddCors(CorsOptions=> CorsOptions.AddPolicy("MyPolicy",
-    CorsPolicyBuilder => CorsPolicyBuilder.AllowAnyMethod().AllowAnyHeader().AllowAnyOrigin()));
+CorsPolicyBuilder => CorsPolicyBuilder.AllowAnyMethod().AllowAnyHeader().AllowAnyOrigin()));
 var ValidIssur = builder.Configuration["JWT:Issuer"];
 var ValidAudiance = builder.Configuration["JWT:Audiance"];
 var ValidKey = builder.Configuration["JWT:SecretKey"];
@@ -72,6 +72,7 @@ builder.Services.AddAuthentication(options =>
         IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(ValidKey))
     };
 });
+builder.Services.AddHttpContextAccessor();
 builder.Services.AddScoped<ICRUDRepo<Patient>, MainRepository<Patient>>();
 builder.Services.AddScoped<ICRUDRepo<AssosiationBranch>, MainRepository<AssosiationBranch>>();
 builder.Services.AddScoped<ICRUDRepo<Dises>, MainRepository<Dises>>();
@@ -83,6 +84,8 @@ builder.Services.AddScoped<ICRUDRepo<Lab>, MainRepository<Lab>>();
 builder.Services.AddScoped<ICRUDRepo<Hospital>, MainRepository<Hospital>>();
 builder.Services.AddScoped<ICRUDRepo<Product>, MainRepository<Product>>();
 builder.Services.AddScoped<ICRUDRepo<RawMaterial>, MainRepository<RawMaterial>>();
+builder.Services.AddScoped<ICRUDRepo<Order>, MainRepository<Order>>();
+
 
 var app = builder.Build();
 
