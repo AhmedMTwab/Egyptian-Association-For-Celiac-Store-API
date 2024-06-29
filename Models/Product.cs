@@ -23,8 +23,8 @@ public partial class Product
 
     [Column("price", TypeName = "money")]
     public decimal Price { get; set; }
-    [Column("orderid")]
-    public int OrderId { get; set; }
+    [Column("CartId")]
+    public int CartId { get; set; }
 
     [InverseProperty("Product")]
     public virtual ICollection<ProductImage> Images { get; set; } = new List<ProductImage>();
@@ -34,9 +34,9 @@ public partial class Product
 
     [InverseProperty("Product")]
     public virtual ICollection<PatientProductView> patients { get; set; } = new List<PatientProductView>();
-    [ForeignKey("OrderId")]
-    [InverseProperty("products")]
-    public virtual Order? Order { get; set; }
+    [ForeignKey("CartId")]
+    [InverseProperty("Products")]
+    public virtual Cart? Cart { get; set; }
 
 
 }

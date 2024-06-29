@@ -43,22 +43,22 @@ namespace Egyptian_association_of_cieliac_patients_api.Controllers
             Order.ShipmentTime=TimeOnly.FromDateTime(DateTime.Now.AddDays(1));
             Order.ShipmentPhone = order.ShipmentPhone;
 
-            foreach (var item in order.Products)
-            {
-                    var product = productrepo.FindById(item);
-                    if(product !=null)
-                    Order.products.Add(product);
+            //foreach (var item in order.Products)
+            //{
+            //        var product = productrepo.FindById(item);
+            //        if(product !=null)
+            //        //Order.products.Add(product);
                 
-            }
+            //}
 
-            foreach (var item in order.RawMaterials)
-            {
+            //foreach (var item in order.RawMaterials)
+            //{
 
-                RawMaterial? rawmaterial = Rawmaterialrepo.FindById(item);
-                if (rawmaterial != null)
-                    Order.Matrerials.Add(rawmaterial);
+            //    RawMaterial? rawmaterial = Rawmaterialrepo.FindById(item);
+            //    if (rawmaterial != null)
+            //        //Order.Matrerials.Add(rawmaterial);
 
-            }
+            //}
           
             orderrepo.AddOne(Order);
 

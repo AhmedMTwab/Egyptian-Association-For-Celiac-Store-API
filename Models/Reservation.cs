@@ -17,16 +17,8 @@ public partial class Reservation
     [Column("reservation_date")]
     public DateOnly ReservationDate { get; set; }
 
-    [Column("status", TypeName = "text")]
-    public string Status { get; set; } = null!;
-
     [Column("reservation_time")]
     public TimeOnly ReservationTime { get; set; }
-
-    [Column("appointment_type")]
-    [StringLength(50)]
-    [Unicode(false)]
-    public string AppointmentType { get; set; } = null!;
 
     [Column("book_date")]
     public DateOnly BookDate { get; set; }

@@ -35,26 +35,19 @@ public partial class Order
     [Column("shipment_phone")]
     public string ShipmentPhone { get; set; }
 
-    //[Column("product_id")]
-    //public int ProductId { get; set; }
-
-    //[Column("material_id")]
-    //public int MaterialId { get; set; }
-
+   
     [Column("patient_id")]
     public int PatientId { get; set; }
 
-   
 
+
+    [Column("Cart_id")]
+    public int CartId { get; set; }
 
     [ForeignKey("PatientId")]
     [InverseProperty("Orders")]
     public virtual Patient Patient { get; set; } = null!;
 
-   
-    [InverseProperty("Order")]
-    public virtual ICollection<Product> products { get; set; } = new List<Product>();
-
-    [InverseProperty("Order")]
-    public virtual ICollection<RawMaterial> Matrerials { get; set; } = new List<RawMaterial>();
+    [ForeignKey("CartId")]
+    public virtual Cart Cart { get; set; }
 }

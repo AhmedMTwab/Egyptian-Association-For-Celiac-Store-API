@@ -85,6 +85,8 @@ builder.Services.AddScoped<ICRUDRepo<Hospital>, MainRepository<Hospital>>();
 builder.Services.AddScoped<ICRUDRepo<Product>, MainRepository<Product>>();
 builder.Services.AddScoped<ICRUDRepo<RawMaterial>, MainRepository<RawMaterial>>();
 builder.Services.AddScoped<ICRUDRepo<Order>, MainRepository<Order>>();
+builder.Services.AddScoped<ICRUDRepo<Reservation>, MainRepository<Reservation>>();
+
 
 
 var app = builder.Build();

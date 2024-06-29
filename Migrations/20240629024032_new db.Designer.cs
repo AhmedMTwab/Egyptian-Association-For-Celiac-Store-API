@@ -4,6 +4,7 @@ using Egyptian_association_of_cieliac_patients_api.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Egyptian_association_of_cieliac_patients.Migrations
 {
     [DbContext(typeof(EgyptianAssociationOfCieliacPatientsContext))]
-    partial class EgyptianAssociationOfCieliacPatientsContextModelSnapshot : ModelSnapshot
+    [Migration("20240629024032_new db")]
+    partial class newdb
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
