@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\graduation-project\\api\\Egyptian association of cieliac patients api\\Egyptian association of cieliac patients api.csproj": {}
+    "D:\\graduation-project\\api\\graduation-project-api\\Egyptian association of cieliac patients api.csproj": {}
   },
   "projects": {
-    "D:\\graduation-project\\api\\Egyptian association of cieliac patients api\\Egyptian association of cieliac patients api.csproj": {
+    "D:\\graduation-project\\api\\graduation-project-api\\Egyptian association of cieliac patients api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\graduation-project\\api\\Egyptian association of cieliac patients api\\Egyptian association of cieliac patients api.csproj",
+        "projectUniqueName": "D:\\graduation-project\\api\\graduation-project-api\\Egyptian association of cieliac patients api.csproj",
         "projectName": "Egyptian association of cieliac patients api",
-        "projectPath": "D:\\graduation-project\\api\\Egyptian association of cieliac patients api\\Egyptian association of cieliac patients api.csproj",
+        "projectPath": "D:\\graduation-project\\api\\graduation-project-api\\Egyptian association of cieliac patients api.csproj",
         "packagesPath": "C:\\Users\\ahmed\\.nuget\\packages\\",
-        "outputPath": "D:\\graduation-project\\api\\Egyptian association of cieliac patients api\\obj\\",
+        "outputPath": "D:\\graduation-project\\api\\graduation-project-api\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ahmed\\AppData\\Roaming\\NuGet\\NuGet.Config",
