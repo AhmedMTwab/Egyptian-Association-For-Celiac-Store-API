@@ -69,8 +69,8 @@ namespace Egyptian_association_of_cieliac_patients_api.Controllers
             }
         }
         [Authorize]
-        [HttpPost("addtocart/{materialId:int}", Name = "MaterialToCartRoute")]
-        public IActionResult addproducttocart(int materialId)
+        [HttpPost("addtocart/{materialId:int}/{quantity:int}", Name = "MaterialToCartRoute")]
+        public IActionResult addproducttocart(int materialId,int quantity)
         {
             int claim = int.Parse(httpContextAccessor.HttpContext.User.Claims.FirstOrDefault(c => c.Type == "ID").Value);
             var cart = patientrepo.FindAll().FirstOrDefault(d => d.PatientId == claim).Cart;
@@ -84,7 +84,14 @@ namespace Egyptian_association_of_cieliac_patients_api.Controllers
                 return BadRequest("there was no cart for this user Please try again");
             }
             var material = materialrepo.FindById(materialId);
-            cart.RawMaterials.Add(material);
+            var addmaterial = new CartMaterialHave()
+            {
+                Cart = cart,
+                Material = material,
+                Quantity= quantity,
+                
+            };
+            cart.RawMaterials.Add(addmaterial);
             cartrepo.UpdateOne(cart);
             return Ok($"Added {material.Name} to cart succesfully");
         }

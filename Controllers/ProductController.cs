@@ -68,8 +68,8 @@ namespace Egyptian_association_of_cieliac_patients_api.Controllers
             }
         }
         [Authorize]
-        [HttpPost("addtocart/{productId:int}", Name = "ProductToCartRoute")]
-        public IActionResult addproducttocart(int productId)
+        [HttpPost("addtocart/{productId:int}/{quantity:int}", Name = "ProductToCartRoute")]
+        public IActionResult addproducttocart(int productId,int quantity)
         {
             int claim = int.Parse(httpContextAccessor.HttpContext.User.Claims.FirstOrDefault(c => c.Type == "ID").Value);
             var cart = patientrepo.FindAll().FirstOrDefault(d => d.PatientId == claim).Cart;
@@ -83,7 +83,13 @@ namespace Egyptian_association_of_cieliac_patients_api.Controllers
                 return BadRequest("there was no cart for this user Please try again");
             }
                 var product = productrepo.FindById(productId);
-                cart.Products.Add(product);
+                var addproduct = new CartProductHave()
+                {
+                    Cart = cart,
+                    Product= product,
+                    Quantity = quantity
+                };
+                cart.Products.Add(addproduct);
                 cartrepo.UpdateOne(cart);
             return Ok($"Added {product.Name} to cart succesfully");
         }

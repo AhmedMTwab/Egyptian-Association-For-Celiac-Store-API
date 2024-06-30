@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Egyptian_association_of_cieliac_patients_api.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
@@ -26,7 +27,8 @@ public partial class EgyptianAssociationOfCieliacPatientsContext : DbContext
 
     public virtual DbSet<Clinic> Clinics { get; set; }
     public virtual DbSet<Cart> Carts { get; set; }
-
+    public virtual DbSet<CartProductHave> CartProductHaves { get; set; }
+    public virtual DbSet<CartMaterialHave> CartMaterialHaves { get; set; }
 
     public virtual DbSet<ClinicAssosiationDiscount> ClinicAssosiationDiscounts { get; set; }
 
@@ -387,7 +389,7 @@ public partial class EgyptianAssociationOfCieliacPatientsContext : DbContext
         modelBuilder.Entity<Product>(entity =>
         {
             entity.Property(e => e.ProductId).ValueGeneratedOnAdd();
-            entity.HasOne(d => d.Cart).WithMany(p => p.Products).OnDelete(DeleteBehavior.Cascade);
+           
         });
 
         modelBuilder.Entity<ProductImage>(entity =>
@@ -401,7 +403,7 @@ public partial class EgyptianAssociationOfCieliacPatientsContext : DbContext
         modelBuilder.Entity<RawMaterial>(entity =>
         {
             entity.Property(e => e.MaterialId).ValueGeneratedOnAdd();
-            entity.HasOne(d => d.Cart).WithMany(p => p.RawMaterials).OnDelete(DeleteBehavior.Cascade);
+           
         });
         modelBuilder.Entity<RawMaterialImage>(entity =>
         {
@@ -431,7 +433,19 @@ public partial class EgyptianAssociationOfCieliacPatientsContext : DbContext
 
             entity.HasMany(d => d.RawMaterials).WithOne(p => p.Cart).OnDelete(DeleteBehavior.Cascade);
             entity.HasMany(d => d.Products).WithOne(p => p.Cart).OnDelete(DeleteBehavior.Cascade);
-            entity.HasOne(d => d.Patient).WithOne(p=>p.Cart).OnDelete(DeleteBehavior.ClientCascade);
+            entity.HasOne(d => d.Patient).WithOne(p => p.Cart).OnDelete(DeleteBehavior.ClientCascade);
+
+        });
+        modelBuilder.Entity<CartProductHave>(entity =>
+        {
+            entity.HasOne(d => d.Cart).WithMany(p => p.Products).OnDelete(DeleteBehavior.Cascade);
+            entity.HasOne(d => d.Product).WithMany(p => p.Carts).OnDelete(DeleteBehavior.Cascade);
+
+        });
+        modelBuilder.Entity<CartMaterialHave>(entity =>
+        {
+            entity.HasOne(d => d.Cart).WithMany(p => p.RawMaterials).OnDelete(DeleteBehavior.Cascade);
+            entity.HasOne(d => d.Material).WithMany(p => p.Carts).OnDelete(DeleteBehavior.Cascade);
 
         });
         base.OnModelCreating(modelBuilder);

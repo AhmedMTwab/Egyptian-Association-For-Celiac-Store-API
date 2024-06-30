@@ -33,13 +33,22 @@ namespace Egyptian_association_of_cieliac_patients_api.Controllers
             var cart = cartrepo.FindAll().Where(d => d.PatientId == claim).FirstOrDefault();
 
             cartdto.Id = cart.CartId;
-            foreach (var product in cart.Products) {
-                cartdto.cartproductsId.Add(product.ProductId);
+            //foreach (var product in cart.Products) {
+            //    cartdto.cartproductsId.Add(product.ProductId);
+            //}
+            foreach (var product in cart.Products)
+            {
+                Dictionary<int,int> cartproduct=new Dictionary<int,int>();
+                cartproduct.Add(product.ProductId, product.Quantity);
+                cartdto.products.Add(cartproduct);
             }
             foreach (var material in cart.RawMaterials)
             {
-                cartdto.cartmaterialsId.Add(material.MaterialId);
+                Dictionary<int, int> cartmaterial = new Dictionary<int, int>();
+                cartmaterial.Add(material.MaterialId, material.Quantity);
+                cartdto.RawMaterials.Add(cartmaterial);
             }
+            
 
 
             return Ok(cartdto);

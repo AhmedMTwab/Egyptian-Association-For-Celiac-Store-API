@@ -23,9 +23,8 @@ public partial class RawMaterial
 
     [Column("price", TypeName = "money")]
     public decimal Price { get; set; }
-    [Column("CartId")]
-    public int? CartId { get; set; }
-
+    [Column("stock")]
+    public int Stock { get; set; }
     [InverseProperty("Material")]
     public virtual ICollection<RawMaterialImage> Images { get; set; } = new List<RawMaterialImage>();
 
@@ -34,7 +33,7 @@ public partial class RawMaterial
 
     [InverseProperty("Material")]
     public virtual ICollection<PatientRawmaterialVeiw> patients { get; set; } = new List<PatientRawmaterialVeiw>();
-    [ForeignKey("CartId")]
-    [InverseProperty("RawMaterials")]
-    public virtual Cart? Cart { get; set; }
+   
+    [InverseProperty("Material")]
+    public virtual ICollection<CartMaterialHave> Carts { get; set; }= new List<CartMaterialHave>();
 }
