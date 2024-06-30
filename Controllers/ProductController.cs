@@ -1,6 +1,7 @@
 ﻿using Egyptian_association_of_cieliac_patients_api.DTO;
 using Egyptian_association_of_cieliac_patients_api.Models;
 using Egyptian_association_of_cieliac_patients_api.Repositories;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -11,14 +12,20 @@ namespace Egyptian_association_of_cieliac_patients_api.Controllers
     public class ProductController : ControllerBase
     {
         private readonly ICRUDRepo<Product> productrepo;
+        private readonly ICRUDRepo<Cart> cartrepo;
+        private readonly ICRUDRepo<Patient> patientrepo;
         private readonly ICRUDRepo<AssosiationBranch> assosiation_Crud;
         private readonly IWebHostEnvironment hosting;
+        private readonly IHttpContextAccessor httpContextAccessor;
 
-        public ProductController(ICRUDRepo<Product> productrepo, ICRUDRepo<AssosiationBranch> assosiation_crud, IWebHostEnvironment hosting)
+        public ProductController(ICRUDRepo<Product> productrepo, ICRUDRepo<Cart> cartrepo, ICRUDRepo<Patient> patientrepo, ICRUDRepo<AssosiationBranch> assosiation_crud, IWebHostEnvironment hosting,IHttpContextAccessor httpContextAccessor)
         {
             this.productrepo = productrepo;
+            this.cartrepo = cartrepo;
+            this.patientrepo = patientrepo;
             assosiation_Crud = assosiation_crud;
             this.hosting = hosting;
+            this.httpContextAccessor = httpContextAccessor;
         }
         [HttpGet]
         public IActionResult Index()
@@ -59,6 +66,26 @@ namespace Egyptian_association_of_cieliac_patients_api.Controllers
             {
                 return NotFound();
             }
+        }
+        [Authorize]
+        [HttpPost("addtocart/{productId:int}", Name = "ProductToCartRoute")]
+        public IActionResult addproducttocart(int productId)
+        {
+            int claim = int.Parse(httpContextAccessor.HttpContext.User.Claims.FirstOrDefault(c => c.Type == "ID").Value);
+            var cart = patientrepo.FindAll().FirstOrDefault(d => d.PatientId == claim).Cart;
+            if (cart == null)
+            {
+                Cart newcart = new Cart()
+                {
+                    PatientId = claim,
+                };
+                cartrepo.AddOne(newcart);
+                return BadRequest("there was no cart for this user Please try again");
+            }
+                var product = productrepo.FindById(productId);
+                cart.Products.Add(product);
+                cartrepo.UpdateOne(cart);
+            return Ok($"Added {product.Name} to cart succesfully");
         }
     }
 }

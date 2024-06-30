@@ -1,6 +1,7 @@
 ﻿using Egyptian_association_of_cieliac_patients_api.DTO;
 using Egyptian_association_of_cieliac_patients_api.Models;
 using Egyptian_association_of_cieliac_patients_api.Repositories;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -8,6 +9,7 @@ namespace Egyptian_association_of_cieliac_patients_api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class ReservationController : ControllerBase
     {
         private readonly ICRUDRepo<Reservation> reservationrepo;
@@ -27,25 +29,27 @@ namespace Egyptian_association_of_cieliac_patients_api.Controllers
         {
             var viewDtos=new List<ViewReservationDto>();
             int claim = int.Parse(httpContextAccessor.HttpContext.User.Claims.FirstOrDefault(c => c.Type == "ID").Value);
-            var Reservations = reservationrepo.FindAll().Where(d => d.PatientId == claim).ToList();
-            foreach (var Reservation in Reservations)
-            {
-                var viewDto = new ViewReservationDto();
-                viewDto.ReservationId = Reservation.ReservationId;
-                viewDto.ReservationDate = Reservation.ReservationDate;
-                var clinic=clinicrepo.FindById(Reservation.clinic.ClinicId);
-                viewDto.ClinicName = clinic.Name;
-                viewDto.ReservationTime = Reservation.ReservationTime;
-                viewDto.BookDate = Reservation.BookDate;
-                viewDto.BookTime = Reservation.BookTime;
-                viewDtos.Add(viewDto);
-            }
-            if (viewDtos.Count > 0)
-            {
-                return Ok(viewDtos);
-            }
-            else
+           
+                var Reservations = reservationrepo.FindAll().Where(d => d.PatientId == claim).ToList();
+                foreach (var Reservation in Reservations)
+                {
+                    var viewDto = new ViewReservationDto();
+                    viewDto.ReservationId = Reservation.ReservationId;
+                    viewDto.ReservationDate = Reservation.ReservationDate;
+                    var clinic = clinicrepo.FindById(Reservation.clinic.ClinicId);
+                    viewDto.ClinicName = clinic.Name;
+                    viewDto.ReservationTime = Reservation.ReservationTime;
+                    viewDto.BookDate = Reservation.BookDate;
+                    viewDto.BookTime = Reservation.BookTime;
+                    viewDtos.Add(viewDto);
+                }
+                if (viewDtos.Count > 0)
+                {
+                    return Ok(viewDtos);
+                }
                 return NoContent();
+            
+           
 
         }
         [HttpPost("{ClinicId:int}")]

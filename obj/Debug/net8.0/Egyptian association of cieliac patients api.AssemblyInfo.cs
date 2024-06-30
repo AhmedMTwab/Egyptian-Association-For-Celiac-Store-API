@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Egyptian association of cieliac patients api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+54434a5a757644f110316880ebaed2f80c20c0c5")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a56aedd65005a6fbb3c22dfe490adb3f084eb496")]
 [assembly: System.Reflection.AssemblyProductAttribute("Egyptian association of cieliac patients api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Egyptian association of cieliac patients api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

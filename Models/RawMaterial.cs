@@ -24,7 +24,7 @@ public partial class RawMaterial
     [Column("price", TypeName = "money")]
     public decimal Price { get; set; }
     [Column("CartId")]
-    public int CartId { get; set; }
+    public int? CartId { get; set; }
 
     [InverseProperty("Material")]
     public virtual ICollection<RawMaterialImage> Images { get; set; } = new List<RawMaterialImage>();

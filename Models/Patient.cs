@@ -52,6 +52,9 @@ public partial class Patient
     public virtual ICollection<Reservation>? clinics { get; set; } = new List<Reservation>();
     [InverseProperty("Patient")]
     public virtual ICollection<MedicalRecord>? Medicalrecords { get; set; } = new List<MedicalRecord>();
+    [InverseProperty("Patient")]
+    public virtual Cart Cart { get; set; }
+
 
 
 }

@@ -38,9 +38,10 @@ namespace Egyptian_association_of_cieliac_patients_api.Controllers
                     }
                     foreach (DoctorClinicWork clinic in doctor.clinics)
                     {
+                        DoctorDto.clinicIds.Add(clinic.ClinicId);
                         DoctorDto.ClinicNames.Add(clinic.Clinic.Name);
-                        DoctorDto.ClinicArrivalTimes.Add(clinic.ArriveTime.ToTimeSpan());
-                        DoctorDto.ClinicLeaveTimes.Add(clinic.LeaveTime.ToTimeSpan());
+                        DoctorDto.ClinicDoctorArrivalTimes.Add(clinic.ArriveTime.ToTimeSpan());
+                        DoctorDto.ClinicDoctorLeaveTimes.Add(clinic.LeaveTime.ToTimeSpan());
                     }
                     DoctorDtos.Add(DoctorDto);
                 }
@@ -65,8 +66,8 @@ namespace Egyptian_association_of_cieliac_patients_api.Controllers
                 foreach (DoctorClinicWork clinic in doctor.clinics)
                 {
                     DoctorDto.ClinicNames.Add(clinic.Clinic.Name);
-                    DoctorDto.ClinicArrivalTimes.Add(clinic.ArriveTime.ToTimeSpan());
-                    DoctorDto.ClinicLeaveTimes.Add(clinic.LeaveTime.ToTimeSpan());
+                    DoctorDto.ClinicDoctorArrivalTimes.Add(clinic.ArriveTime.ToTimeSpan());
+                    DoctorDto.ClinicDoctorLeaveTimes.Add(clinic.LeaveTime.ToTimeSpan());
                 }
 
                 return Ok(DoctorDto);

@@ -3,44 +3,36 @@
   "WorkspaceRootPath": "D:\\graduation-project\\api\\Egyptian association of cieliac patients api\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C41E3F03-2A86-41ED-B760-22D5639DAC00}|Egyptian association of cieliac patients api.csproj|d:\\graduation-project\\api\\egyptian association of cieliac patients api\\controllers\\reservationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C41E3F03-2A86-41ED-B760-22D5639DAC00}|Egyptian association of cieliac patients api.csproj|solutionrelative:controllers\\reservationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C41E3F03-2A86-41ED-B760-22D5639DAC00}|Egyptian association of cieliac patients api.csproj|d:\\graduation-project\\api\\egyptian association of cieliac patients api\\controllers\\patientcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C41E3F03-2A86-41ED-B760-22D5639DAC00}|Egyptian association of cieliac patients api.csproj|solutionrelative:controllers\\patientcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C41E3F03-2A86-41ED-B760-22D5639DAC00}|Egyptian association of cieliac patients api.csproj|d:\\graduation-project\\api\\egyptian association of cieliac patients api\\dto\\reservationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C41E3F03-2A86-41ED-B760-22D5639DAC00}|Egyptian association of cieliac patients api.csproj|solutionrelative:dto\\reservationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C41E3F03-2A86-41ED-B760-22D5639DAC00}|Egyptian association of cieliac patients api.csproj|d:\\graduation-project\\api\\egyptian association of cieliac patients api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{C41E3F03-2A86-41ED-B760-22D5639DAC00}|Egyptian association of cieliac patients api.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C41E3F03-2A86-41ED-B760-22D5639DAC00}|Egyptian association of cieliac patients api.csproj|d:\\graduation-project\\api\\egyptian association of cieliac patients api\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C41E3F03-2A86-41ED-B760-22D5639DAC00}|Egyptian association of cieliac patients api.csproj|solutionrelative:controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C41E3F03-2A86-41ED-B760-22D5639DAC00}|Egyptian association of cieliac patients api.csproj|d:\\graduation-project\\api\\egyptian association of cieliac patients api\\models\\egyptianassociationofcieliacpatientscontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C41E3F03-2A86-41ED-B760-22D5639DAC00}|Egyptian association of cieliac patients api.csproj|solutionrelative:models\\egyptianassociationofcieliacpatientscontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C41E3F03-2A86-41ED-B760-22D5639DAC00}|Egyptian association of cieliac patients api.csproj|d:\\graduation-project\\api\\egyptian association of cieliac patients api\\migrations\\egyptianassociationofcieliacpatientscontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C41E3F03-2A86-41ED-B760-22D5639DAC00}|Egyptian association of cieliac patients api.csproj|solutionrelative:migrations\\egyptianassociationofcieliacpatientscontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C41E3F03-2A86-41ED-B760-22D5639DAC00}|Egyptian association of cieliac patients api.csproj|d:\\graduation-project\\api\\egyptian association of cieliac patients api\\migrations\\20240629024032_new db.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C41E3F03-2A86-41ED-B760-22D5639DAC00}|Egyptian association of cieliac patients api.csproj|solutionrelative:migrations\\20240629024032_new db.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C41E3F03-2A86-41ED-B760-22D5639DAC00}|Egyptian association of cieliac patients api.csproj|d:\\graduation-project\\api\\egyptian association of cieliac patients api\\models\\assosiationbranch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C41E3F03-2A86-41ED-B760-22D5639DAC00}|Egyptian association of cieliac patients api.csproj|solutionrelative:models\\assosiationbranch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C41E3F03-2A86-41ED-B760-22D5639DAC00}|Egyptian association of cieliac patients api.csproj|d:\\graduation-project\\api\\egyptian association of cieliac patients api\\dto\\patientdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C41E3F03-2A86-41ED-B760-22D5639DAC00}|Egyptian association of cieliac patients api.csproj|solutionrelative:dto\\patientdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C41E3F03-2A86-41ED-B760-22D5639DAC00}|Egyptian association of cieliac patients api.csproj|d:\\graduation-project\\api\\egyptian association of cieliac patients api\\controllers\\doctorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C41E3F03-2A86-41ED-B760-22D5639DAC00}|Egyptian association of cieliac patients api.csproj|solutionrelative:controllers\\doctorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C41E3F03-2A86-41ED-B760-22D5639DAC00}|Egyptian association of cieliac patients api.csproj|d:\\graduation-project\\api\\egyptian association of cieliac patients api\\controllers\\cliniccontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C41E3F03-2A86-41ED-B760-22D5639DAC00}|Egyptian association of cieliac patients api.csproj|solutionrelative:controllers\\cliniccontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C41E3F03-2A86-41ED-B760-22D5639DAC00}|Egyptian association of cieliac patients api.csproj|d:\\graduation-project\\api\\egyptian association of cieliac patients api\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C41E3F03-2A86-41ED-B760-22D5639DAC00}|Egyptian association of cieliac patients api.csproj|solutionrelative:controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C41E3F03-2A86-41ED-B760-22D5639DAC00}|Egyptian association of cieliac patients api.csproj|d:\\graduation-project\\api\\egyptian association of cieliac patients api\\controllers\\rawmatrialcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C41E3F03-2A86-41ED-B760-22D5639DAC00}|Egyptian association of cieliac patients api.csproj|solutionrelative:controllers\\rawmatrialcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C41E3F03-2A86-41ED-B760-22D5639DAC00}|Egyptian association of cieliac patients api.csproj|d:\\graduation-project\\api\\egyptian association of cieliac patients api\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C41E3F03-2A86-41ED-B760-22D5639DAC00}|Egyptian association of cieliac patients api.csproj|solutionrelative:controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C41E3F03-2A86-41ED-B760-22D5639DAC00}|Egyptian association of cieliac patients api.csproj|d:\\graduation-project\\api\\egyptian association of cieliac patients api\\models\\cart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C41E3F03-2A86-41ED-B760-22D5639DAC00}|Egyptian association of cieliac patients api.csproj|solutionrelative:models\\cart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C41E3F03-2A86-41ED-B760-22D5639DAC00}|Egyptian association of cieliac patients api.csproj|d:\\graduation-project\\api\\egyptian association of cieliac patients api\\dto\\cartviewdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C41E3F03-2A86-41ED-B760-22D5639DAC00}|Egyptian association of cieliac patients api.csproj|solutionrelative:dto\\cartviewdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,7 +42,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -62,126 +54,112 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ReservationController.cs",
-              "DocumentMoniker": "D:\\graduation-project\\api\\Egyptian association of cieliac patients api\\Controllers\\ReservationController.cs",
-              "RelativeDocumentMoniker": "Controllers\\ReservationController.cs",
-              "ToolTip": "D:\\graduation-project\\api\\Egyptian association of cieliac patients api\\Controllers\\ReservationController.cs",
-              "RelativeToolTip": "Controllers\\ReservationController.cs",
-              "ViewState": "AQIAACQAAAAAAAAAAAAowDkAAABkAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-29T03:19:59.696Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ReservationDto.cs",
-              "DocumentMoniker": "D:\\graduation-project\\api\\Egyptian association of cieliac patients api\\DTO\\ReservationDto.cs",
-              "RelativeDocumentMoniker": "DTO\\ReservationDto.cs",
-              "ToolTip": "D:\\graduation-project\\api\\Egyptian association of cieliac patients api\\DTO\\ReservationDto.cs",
-              "RelativeToolTip": "DTO\\ReservationDto.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAXAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-29T03:18:05.842Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "D:\\graduation-project\\api\\Egyptian association of cieliac patients api\\appsettings.json",
-              "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "D:\\graduation-project\\api\\Egyptian association of cieliac patients api\\appsettings.json",
-              "RelativeToolTip": "appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAClAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-06-29T03:14:34.68Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "EgyptianAssociationOfCieliacPatientsContext.cs",
-              "DocumentMoniker": "D:\\graduation-project\\api\\Egyptian association of cieliac patients api\\Models\\EgyptianAssociationOfCieliacPatientsContext.cs",
-              "RelativeDocumentMoniker": "Models\\EgyptianAssociationOfCieliacPatientsContext.cs",
-              "ToolTip": "D:\\graduation-project\\api\\Egyptian association of cieliac patients api\\Models\\EgyptianAssociationOfCieliacPatientsContext.cs",
-              "RelativeToolTip": "Models\\EgyptianAssociationOfCieliacPatientsContext.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAABMAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-29T02:46:05.432Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "EgyptianAssociationOfCieliacPatientsContextModelSnapshot.cs",
-              "DocumentMoniker": "D:\\graduation-project\\api\\Egyptian association of cieliac patients api\\Migrations\\EgyptianAssociationOfCieliacPatientsContextModelSnapshot.cs",
-              "RelativeDocumentMoniker": "Migrations\\EgyptianAssociationOfCieliacPatientsContextModelSnapshot.cs",
-              "ToolTip": "D:\\graduation-project\\api\\Egyptian association of cieliac patients api\\Migrations\\EgyptianAssociationOfCieliacPatientsContextModelSnapshot.cs",
-              "RelativeToolTip": "Migrations\\EgyptianAssociationOfCieliacPatientsContextModelSnapshot.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAyAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-29T02:45:57.251Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "20240629024032_new db.Designer.cs",
-              "DocumentMoniker": "D:\\graduation-project\\api\\Egyptian association of cieliac patients api\\Migrations\\20240629024032_new db.Designer.cs",
-              "RelativeDocumentMoniker": "Migrations\\20240629024032_new db.Designer.cs",
-              "ToolTip": "D:\\graduation-project\\api\\Egyptian association of cieliac patients api\\Migrations\\20240629024032_new db.Designer.cs",
-              "RelativeToolTip": "Migrations\\20240629024032_new db.Designer.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAyAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-29T02:45:46.269Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "AssosiationBranch.cs",
-              "DocumentMoniker": "D:\\graduation-project\\api\\Egyptian association of cieliac patients api\\Models\\AssosiationBranch.cs",
-              "RelativeDocumentMoniker": "Models\\AssosiationBranch.cs",
-              "ToolTip": "D:\\graduation-project\\api\\Egyptian association of cieliac patients api\\Models\\AssosiationBranch.cs",
-              "RelativeToolTip": "Models\\AssosiationBranch.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAA2AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-29T02:45:07.094Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
               "Title": "DoctorController.cs",
               "DocumentMoniker": "D:\\graduation-project\\api\\Egyptian association of cieliac patients api\\Controllers\\DoctorController.cs",
               "RelativeDocumentMoniker": "Controllers\\DoctorController.cs",
               "ToolTip": "D:\\graduation-project\\api\\Egyptian association of cieliac patients api\\Controllers\\DoctorController.cs",
               "RelativeToolTip": "Controllers\\DoctorController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAjAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAABcAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-29T02:44:35.578Z"
+              "WhenOpened": "2024-06-30T03:35:23.587Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "ClinicController.cs",
-              "DocumentMoniker": "D:\\graduation-project\\api\\Egyptian association of cieliac patients api\\Controllers\\ClinicController.cs",
-              "RelativeDocumentMoniker": "Controllers\\ClinicController.cs",
-              "ToolTip": "D:\\graduation-project\\api\\Egyptian association of cieliac patients api\\Controllers\\ClinicController.cs",
-              "RelativeToolTip": "Controllers\\ClinicController.cs",
-              "ViewState": "AQIAAEQAAAAAAAAAAAAowFkAAAAZAAAA",
+              "DocumentIndex": 0,
+              "Title": "PatientController.cs",
+              "DocumentMoniker": "D:\\graduation-project\\api\\Egyptian association of cieliac patients api\\Controllers\\PatientController.cs",
+              "RelativeDocumentMoniker": "Controllers\\PatientController.cs",
+              "ToolTip": "D:\\graduation-project\\api\\Egyptian association of cieliac patients api\\Controllers\\PatientController.cs",
+              "RelativeToolTip": "Controllers\\PatientController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAE4AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-29T02:44:11.294Z"
+              "WhenOpened": "2024-06-30T03:32:28.421Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Cart.cs",
+              "DocumentMoniker": "D:\\graduation-project\\api\\Egyptian association of cieliac patients api\\Models\\Cart.cs",
+              "RelativeDocumentMoniker": "Models\\Cart.cs",
+              "ToolTip": "D:\\graduation-project\\api\\Egyptian association of cieliac patients api\\Models\\Cart.cs",
+              "RelativeToolTip": "Models\\Cart.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-30T03:05:45.436Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "CartViewDto.cs",
+              "DocumentMoniker": "D:\\graduation-project\\api\\Egyptian association of cieliac patients api\\DTO\\CartViewDto.cs",
+              "RelativeDocumentMoniker": "DTO\\CartViewDto.cs",
+              "ToolTip": "D:\\graduation-project\\api\\Egyptian association of cieliac patients api\\DTO\\CartViewDto.cs",
+              "RelativeToolTip": "DTO\\CartViewDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-30T02:26:33.198Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CartController.cs",
+              "DocumentMoniker": "D:\\graduation-project\\api\\Egyptian association of cieliac patients api\\Controllers\\CartController.cs",
+              "RelativeDocumentMoniker": "Controllers\\CartController.cs",
+              "ToolTip": "D:\\graduation-project\\api\\Egyptian association of cieliac patients api\\Controllers\\CartController.cs",
+              "RelativeToolTip": "Controllers\\CartController.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAQwBwAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-30T02:24:37.998Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "RawMatrialController.cs",
+              "DocumentMoniker": "D:\\graduation-project\\api\\Egyptian association of cieliac patients api\\Controllers\\RawMatrialController.cs",
+              "RelativeDocumentMoniker": "Controllers\\RawMatrialController.cs",
+              "ToolTip": "D:\\graduation-project\\api\\Egyptian association of cieliac patients api\\Controllers\\RawMatrialController.cs",
+              "RelativeToolTip": "Controllers\\RawMatrialController.cs",
+              "ViewState": "AQIAADsAAAAAAAAAAAAwwFcAAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-30T02:17:28.604Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "OrderController.cs",
-              "DocumentMoniker": "D:\\graduation-project\\api\\Egyptian association of cieliac patients api\\Controllers\\OrderController.cs",
-              "RelativeDocumentMoniker": "Controllers\\OrderController.cs",
-              "ToolTip": "D:\\graduation-project\\api\\Egyptian association of cieliac patients api\\Controllers\\OrderController.cs",
-              "RelativeToolTip": "Controllers\\OrderController.cs",
-              "ViewState": "AQIAABwAAAAAAAAAAAAgwDwAAAAPAAAA",
+              "Title": "ProductController.cs",
+              "DocumentMoniker": "D:\\graduation-project\\api\\Egyptian association of cieliac patients api\\Controllers\\ProductController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ProductController.cs",
+              "ToolTip": "D:\\graduation-project\\api\\Egyptian association of cieliac patients api\\Controllers\\ProductController.cs",
+              "RelativeToolTip": "Controllers\\ProductController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB4AAAAkAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-29T00:51:46.617Z",
+              "WhenOpened": "2024-06-30T01:09:05.549Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PatientDto.cs",
+              "DocumentMoniker": "D:\\graduation-project\\api\\Egyptian association of cieliac patients api\\DTO\\PatientDto.cs",
+              "RelativeDocumentMoniker": "DTO\\PatientDto.cs",
+              "ToolTip": "D:\\graduation-project\\api\\Egyptian association of cieliac patients api\\DTO\\PatientDto.cs",
+              "RelativeToolTip": "DTO\\PatientDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-30T03:32:48.98Z",
               "EditorCaption": ""
             }
           ]
