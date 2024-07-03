@@ -9,6 +9,7 @@ namespace Egyptian_association_of_cieliac_patients_api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class doctorController : ControllerBase
     {
         private readonly ICRUDRepo<Doctor> doctor_Crud;

@@ -9,6 +9,7 @@ namespace Egyptian_association_of_cieliac_patients_api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class RawMatrialController : ControllerBase
     {
         private readonly ICRUDRepo<RawMaterial> materialrepo;
@@ -70,7 +71,7 @@ namespace Egyptian_association_of_cieliac_patients_api.Controllers
         }
         [Authorize]
         [HttpPost("addtocart/{materialId:int}/{quantity:int}", Name = "MaterialToCartRoute")]
-        public IActionResult addproducttocart(int materialId,int quantity)
+        public IActionResult addmaterialtocart(int materialId,int quantity)
         {
             int claim = int.Parse(httpContextAccessor.HttpContext.User.Claims.FirstOrDefault(c => c.Type == "ID").Value);
             var cart = patientrepo.FindAll().FirstOrDefault(d => d.PatientId == claim).Cart;
@@ -84,6 +85,16 @@ namespace Egyptian_association_of_cieliac_patients_api.Controllers
                 return BadRequest("there was no cart for this user Please try again");
             }
             var material = materialrepo.FindById(materialId);
+            foreach (var item in cart.RawMaterials)
+            {
+                if (item.MaterialId == material.MaterialId)
+                {
+                    var oldcartmaterial = cart.RawMaterials.FirstOrDefault(d => d.MaterialId == item.MaterialId);
+                    oldcartmaterial.Quantity += quantity;
+                    cartrepo.UpdateOne(cart);
+                    return Ok($"added more {quantity}  {material.Name} to cart");
+                }
+            }
             var addmaterial = new CartMaterialHave()
             {
                 Cart = cart,
@@ -94,6 +105,17 @@ namespace Egyptian_association_of_cieliac_patients_api.Controllers
             cart.RawMaterials.Add(addmaterial);
             cartrepo.UpdateOne(cart);
             return Ok($"Added {material.Name} to cart succesfully");
+        }
+        [HttpDelete("removefromcart/{id:int}")]
+        public IActionResult romovematerialfromcart(int id)
+        {
+            var material = materialrepo.FindById(id);
+            int claim = int.Parse(httpContextAccessor.HttpContext.User.Claims.FirstOrDefault(c => c.Type == "ID").Value);
+            var cart = patientrepo.FindAll().FirstOrDefault(d => d.PatientId == claim).Cart;
+            var removematerial = cart.RawMaterials.FirstOrDefault(d => d.MaterialId == material.MaterialId);
+            cart.RawMaterials.Remove(removematerial);
+            cartrepo.UpdateOne(cart);
+            return Ok($"{material.Name} removed from cart succesfully");
         }
     }
 }

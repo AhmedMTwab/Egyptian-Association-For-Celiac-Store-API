@@ -1,0 +1,39 @@
+{
+  "Version": 1,
+  "Hash": "LH7wxF0UQzblIk4pZkAj4eiPIptja9eqpU9hR9U7xtI=",
+  "Source": "Egyptian association of cieliac patients api",
+  "BasePath": "_content/Egyptian association of cieliac patients api",
+  "Mode": "Default",
+  "ManifestType": "Publish",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "Egyptian association of cieliac patients api\\wwwroot",
+      "Source": "Egyptian association of cieliac patients api",
+      "ContentRoot": "D:\\graduation-project\\api\\graduation-project-api\\wwwroot\\",
+      "BasePath": "_content/Egyptian association of cieliac patients api",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "D:\\graduation-project\\api\\graduation-project-api\\wwwroot\\images\\Screenshot 2024-06-30 042307.png",
+      "SourceId": "Egyptian association of cieliac patients api",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\graduation-project\\api\\graduation-project-api\\wwwroot\\",
+      "BasePath": "_content/Egyptian association of cieliac patients api",
+      "RelativePath": "images/Screenshot 2024-06-30 042307.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\Screenshot 2024-06-30 042307.png"
+    }
+  ]
+}

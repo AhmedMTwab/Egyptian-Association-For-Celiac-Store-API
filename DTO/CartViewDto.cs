@@ -5,8 +5,10 @@ namespace Egyptian_association_of_cieliac_patients_api.DTO
     public class CartViewDto
     {
         public int Id { get; set; }
-        public List<Dictionary<int,int>> products {  get; set; }= new List<Dictionary <int,int>>();
-        public List<Dictionary<int, int>> RawMaterials { get; set; } = new List<Dictionary<int, int>>();
+        public List<Productdata> Products { get; set; }=new List<Productdata>();
+        public List<MaterialData> Materials { get; set; } = new List<MaterialData>();
+
+
     }
 
 }

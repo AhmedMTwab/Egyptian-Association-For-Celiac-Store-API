@@ -1,6 +1,7 @@
 ﻿using Egyptian_association_of_cieliac_patients_api.DTO;
 using Egyptian_association_of_cieliac_patients_api.Models;
 using Egyptian_association_of_cieliac_patients_api.Repositories;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -8,6 +9,7 @@ namespace Egyptian_association_of_cieliac_patients_api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class HospitalController : ControllerBase
     {
 

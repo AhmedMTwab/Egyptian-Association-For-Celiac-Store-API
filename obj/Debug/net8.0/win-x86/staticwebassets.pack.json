@@ -1,0 +1,25 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\graduation-project\\api\\graduation-project-api\\wwwroot\\images\\Screenshot 2024-06-30 042307.png",
+      "PackagePath": "staticwebassets\\images\\Screenshot 2024-06-30 042307.png"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\win-x86\\staticwebassets\\msbuild.Egyptian association of cieliac patients api.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\win-x86\\staticwebassets\\msbuild.build.Egyptian association of cieliac patients api.props",
+      "PackagePath": "build\\Egyptian association of cieliac patients api.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\win-x86\\staticwebassets\\msbuild.buildMultiTargeting.Egyptian association of cieliac patients api.props",
+      "PackagePath": "buildMultiTargeting\\Egyptian association of cieliac patients api.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\win-x86\\staticwebassets\\msbuild.buildTransitive.Egyptian association of cieliac patients api.props",
+      "PackagePath": "buildTransitive\\Egyptian association of cieliac patients api.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

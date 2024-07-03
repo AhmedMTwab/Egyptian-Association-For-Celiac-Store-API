@@ -41,7 +41,7 @@ namespace Egyptian_association_of_cieliac_patients_api.Controllers
                             issuer: config["JWT:Issuer"],
                             audience: config["JWT:Audiance"],
                             claims: claims,
-                            expires:DateTime.Now.AddHours(1),
+                            expires:DateTime.Now.AddHours(10),
                             signingCredentials:signincred
                             );
                         return Ok(new

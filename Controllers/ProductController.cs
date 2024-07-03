@@ -9,6 +9,7 @@ namespace Egyptian_association_of_cieliac_patients_api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class ProductController : ControllerBase
     {
         private readonly ICRUDRepo<Product> productrepo;
@@ -67,7 +68,6 @@ namespace Egyptian_association_of_cieliac_patients_api.Controllers
                 return NotFound();
             }
         }
-        [Authorize]
         [HttpPost("addtocart/{productId:int}/{quantity:int}", Name = "ProductToCartRoute")]
         public IActionResult addproducttocart(int productId,int quantity)
         {
@@ -83,6 +83,16 @@ namespace Egyptian_association_of_cieliac_patients_api.Controllers
                 return BadRequest("there was no cart for this user Please try again");
             }
                 var product = productrepo.FindById(productId);
+                foreach (var item in cart.Products)
+                {
+                    if(item.ProductId == product.ProductId)
+                    {
+                        var oldcartproduct = cart.Products.FirstOrDefault(d => d.ProductId == item.ProductId);
+                        oldcartproduct.Quantity += quantity;
+                        cartrepo.UpdateOne(cart);
+                        return Ok($"added more {quantity}  {product.Name} to cart");
+                    }
+                }
                 var addproduct = new CartProductHave()
                 {
                     Cart = cart,
@@ -92,6 +102,24 @@ namespace Egyptian_association_of_cieliac_patients_api.Controllers
                 cart.Products.Add(addproduct);
                 cartrepo.UpdateOne(cart);
             return Ok($"Added {product.Name} to cart succesfully");
+        }
+        [HttpDelete("removefromcart/{id:int}")]
+        public IActionResult romoveproductfromcart(int id)
+        {
+            var product=productrepo.FindById(id);
+            int claim = int.Parse(httpContextAccessor.HttpContext.User.Claims.FirstOrDefault(c => c.Type == "ID").Value);
+            var cart = patientrepo.FindAll().FirstOrDefault(d => d.PatientId == claim).Cart;
+            if (cart.Products.FirstOrDefault(d => d.ProductId == id) != null)
+            {
+                var removeproduct = cart.Products.FirstOrDefault(d => d.ProductId == product.ProductId);
+                cart.Products.Remove(removeproduct);
+                cartrepo.UpdateOne(cart);
+                return Ok($"{product.Name} removed from cart succesfully");
+            }
+            else
+            {
+                return BadRequest("this product is not in the cart");
+            }
         }
     }
 }

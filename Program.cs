@@ -67,8 +67,8 @@ builder.Services.AddAuthentication(options =>
     {
         ValidateIssuer = true,
         ValidIssuer = ValidIssur,
-        ValidateAudience = true,
-        ValidAudience = ValidAudiance,
+        ValidateAudience = false,
+        //ValidAudience = ValidAudiance,
         IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(ValidKey))
     };
 });
@@ -87,6 +87,8 @@ builder.Services.AddScoped<ICRUDRepo<RawMaterial>, MainRepository<RawMaterial>>(
 builder.Services.AddScoped<ICRUDRepo<Order>, MainRepository<Order>>();
 builder.Services.AddScoped<ICRUDRepo<Reservation>, MainRepository<Reservation>>();
 builder.Services.AddScoped<ICRUDRepo<Cart>, MainRepository<Cart>>();
+builder.Services.AddScoped<ICRUDRepo<Payment>, MainRepository<Payment>>();
+
 
 
 
@@ -94,11 +96,11 @@ builder.Services.AddScoped<ICRUDRepo<Cart>, MainRepository<Cart>>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
+//if (app.Environment.IsDevelopment())
+//{
     app.UseSwagger();
     app.UseSwaggerUI();
-}
+//}
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();

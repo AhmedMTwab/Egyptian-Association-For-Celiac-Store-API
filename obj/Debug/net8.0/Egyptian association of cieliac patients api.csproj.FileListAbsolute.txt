@@ -278,3 +278,4 @@ D:\graduation-project\api\graduation-project-api\obj\Debug\net8.0\refint\Egyptia
 D:\graduation-project\api\graduation-project-api\obj\Debug\net8.0\Egyptian association of cieliac patients api.pdb
 D:\graduation-project\api\graduation-project-api\obj\Debug\net8.0\Egyptian association of cieliac patients api.genruntimeconfig.cache
 D:\graduation-project\api\graduation-project-api\obj\Debug\net8.0\ref\Egyptian association of cieliac patients api.dll
+D:\graduation-project\api\graduation-project-api\bin\Debug\net8.0\Egyptian association of cieliac patients api.staticwebassets.runtime.json

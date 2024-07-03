@@ -1,0 +1,130 @@
+D:\graduation-project\api\graduation-project-api\bin\Debug\net8.0\win-x86\appsettings.Development.json
+D:\graduation-project\api\graduation-project-api\bin\Debug\net8.0\win-x86\appsettings.json
+D:\graduation-project\api\graduation-project-api\bin\Debug\net8.0\win-x86\Egyptian association of cieliac patients api.exe
+D:\graduation-project\api\graduation-project-api\bin\Debug\net8.0\win-x86\Egyptian association of cieliac patients api.deps.json
+D:\graduation-project\api\graduation-project-api\bin\Debug\net8.0\win-x86\Egyptian association of cieliac patients api.runtimeconfig.json
+D:\graduation-project\api\graduation-project-api\bin\Debug\net8.0\win-x86\Egyptian association of cieliac patients api.dll
+D:\graduation-project\api\graduation-project-api\bin\Debug\net8.0\win-x86\Egyptian association of cieliac patients api.pdb
+D:\graduation-project\api\graduation-project-api\bin\Debug\net8.0\win-x86\Azure.Core.dll
+D:\graduation-project\api\graduation-project-api\bin\Debug\net8.0\win-x86\Azure.Identity.dll
+D:\graduation-project\api\graduation-project-api\bin\Debug\net8.0\win-x86\Castle.Core.dll
+D:\graduation-project\api\graduation-project-api\bin\Debug\net8.0\win-x86\Humanizer.dll
+D:\graduation-project\api\graduation-project-api\bin\Debug\net8.0\win-x86\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\graduation-project\api\graduation-project-api\bin\Debug\net8.0\win-x86\Microsoft.Bcl.AsyncInterfaces.dll
+D:\graduation-project\api\graduation-project-api\bin\Debug\net8.0\win-x86\Microsoft.CodeAnalysis.dll
+D:\graduation-project\api\graduation-project-api\bin\Debug\net8.0\win-x86\Microsoft.CodeAnalysis.CSharp.dll
+D:\graduation-project\api\graduation-project-api\bin\Debug\net8.0\win-x86\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+D:\graduation-project\api\graduation-project-api\bin\Debug\net8.0\win-x86\Microsoft.CodeAnalysis.Workspaces.dll
+D:\graduation-project\api\graduation-project-api\bin\Debug\net8.0\win-x86\Microsoft.Data.SqlClient.dll
+D:\graduation-project\api\graduation-project-api\bin\Debug\net8.0\win-x86\Microsoft.EntityFrameworkCore.dll
+D:\graduation-project\api\graduation-project-api\bin\Debug\net8.0\win-x86\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\graduation-project\api\graduation-project-api\bin\Debug\net8.0\win-x86\Microsoft.EntityFrameworkCore.Design.dll
+D:\graduation-project\api\graduation-project-api\bin\Debug\net8.0\win-x86\Microsoft.EntityFrameworkCore.Proxies.dll
+D:\graduation-project\api\graduation-project-api\bin\Debug\net8.0\win-x86\Microsoft.EntityFrameworkCore.Relational.dll
+D:\graduation-project\api\graduation-project-api\bin\Debug\net8.0\win-x86\Microsoft.EntityFrameworkCore.SqlServer.dll
+D:\graduation-project\api\graduation-project-api\bin\Debug\net8.0\win-x86\Microsoft.Extensions.DependencyModel.dll
+D:\graduation-project\api\graduation-project-api\bin\Debug\net8.0\win-x86\Microsoft.Identity.Client.dll
+D:\graduation-project\api\graduation-project-api\bin\Debug\net8.0\win-x86\Microsoft.Identity.Client.Extensions.Msal.dll
+D:\graduation-project\api\graduation-project-api\bin\Debug\net8.0\win-x86\Microsoft.IdentityModel.Abstractions.dll
+D:\graduation-project\api\graduation-project-api\bin\Debug\net8.0\win-x86\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\graduation-project\api\graduation-project-api\bin\Debug\net8.0\win-x86\Microsoft.IdentityModel.Logging.dll
+D:\graduation-project\api\graduation-project-api\bin\Debug\net8.0\win-x86\Microsoft.IdentityModel.Protocols.dll
+D:\graduation-project\api\graduation-project-api\bin\Debug\net8.0\win-x86\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\graduation-project\api\graduation-project-api\bin\Debug\net8.0\win-x86\Microsoft.IdentityModel.Tokens.dll
+D:\graduation-project\api\graduation-project-api\bin\Debug\net8.0\win-x86\Microsoft.OpenApi.dll
+D:\graduation-project\api\graduation-project-api\bin\Debug\net8.0\win-x86\Microsoft.SqlServer.Server.dll
+D:\graduation-project\api\graduation-project-api\bin\Debug\net8.0\win-x86\Microsoft.Win32.SystemEvents.dll
+D:\graduation-project\api\graduation-project-api\bin\Debug\net8.0\win-x86\Mono.TextTemplating.dll
+D:\graduation-project\api\graduation-project-api\bin\Debug\net8.0\win-x86\Swashbuckle.AspNetCore.Swagger.dll
+D:\graduation-project\api\graduation-project-api\bin\Debug\net8.0\win-x86\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\graduation-project\api\graduation-project-api\bin\Debug\net8.0\win-x86\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\graduation-project\api\graduation-project-api\bin\Debug\net8.0\win-x86\System.CodeDom.dll
+D:\graduation-project\api\graduation-project-api\bin\Debug\net8.0\win-x86\System.Composition.AttributedModel.dll
+D:\graduation-project\api\graduation-project-api\bin\Debug\net8.0\win-x86\System.Composition.Convention.dll
+D:\graduation-project\api\graduation-project-api\bin\Debug\net8.0\win-x86\System.Composition.Hosting.dll
+D:\graduation-project\api\graduation-project-api\bin\Debug\net8.0\win-x86\System.Composition.Runtime.dll
+D:\graduation-project\api\graduation-project-api\bin\Debug\net8.0\win-x86\System.Composition.TypedParts.dll
+D:\graduation-project\api\graduation-project-api\bin\Debug\net8.0\win-x86\System.Configuration.ConfigurationManager.dll
+D:\graduation-project\api\graduation-project-api\bin\Debug\net8.0\win-x86\System.Drawing.Common.dll
+D:\graduation-project\api\graduation-project-api\bin\Debug\net8.0\win-x86\System.IdentityModel.Tokens.Jwt.dll
+D:\graduation-project\api\graduation-project-api\bin\Debug\net8.0\win-x86\System.Memory.Data.dll
+D:\graduation-project\api\graduation-project-api\bin\Debug\net8.0\win-x86\System.Runtime.Caching.dll
+D:\graduation-project\api\graduation-project-api\bin\Debug\net8.0\win-x86\System.Security.Cryptography.ProtectedData.dll
+D:\graduation-project\api\graduation-project-api\bin\Debug\net8.0\win-x86\System.Security.Permissions.dll
+D:\graduation-project\api\graduation-project-api\bin\Debug\net8.0\win-x86\System.Windows.Extensions.dll
+D:\graduation-project\api\graduation-project-api\bin\Debug\net8.0\win-x86\cs\Microsoft.CodeAnalysis.resources.dll
+D:\graduation-project\api\graduation-project-api\bin\Debug\net8.0\win-x86\de\Microsoft.CodeAnalysis.resources.dll
+D:\graduation-project\api\graduation-project-api\bin\Debug\net8.0\win-x86\es\Microsoft.CodeAnalysis.resources.dll
+D:\graduation-project\api\graduation-project-api\bin\Debug\net8.0\win-x86\fr\Microsoft.CodeAnalysis.resources.dll
+D:\graduation-project\api\graduation-project-api\bin\Debug\net8.0\win-x86\it\Microsoft.CodeAnalysis.resources.dll
+D:\graduation-project\api\graduation-project-api\bin\Debug\net8.0\win-x86\ja\Microsoft.CodeAnalysis.resources.dll
+D:\graduation-project\api\graduation-project-api\bin\Debug\net8.0\win-x86\ko\Microsoft.CodeAnalysis.resources.dll
+D:\graduation-project\api\graduation-project-api\bin\Debug\net8.0\win-x86\pl\Microsoft.CodeAnalysis.resources.dll
+D:\graduation-project\api\graduation-project-api\bin\Debug\net8.0\win-x86\pt-BR\Microsoft.CodeAnalysis.resources.dll
+D:\graduation-project\api\graduation-project-api\bin\Debug\net8.0\win-x86\ru\Microsoft.CodeAnalysis.resources.dll
+D:\graduation-project\api\graduation-project-api\bin\Debug\net8.0\win-x86\tr\Microsoft.CodeAnalysis.resources.dll
+D:\graduation-project\api\graduation-project-api\bin\Debug\net8.0\win-x86\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+D:\graduation-project\api\graduation-project-api\bin\Debug\net8.0\win-x86\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+D:\graduation-project\api\graduation-project-api\bin\Debug\net8.0\win-x86\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\graduation-project\api\graduation-project-api\bin\Debug\net8.0\win-x86\de\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\graduation-project\api\graduation-project-api\bin\Debug\net8.0\win-x86\es\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\graduation-project\api\graduation-project-api\bin\Debug\net8.0\win-x86\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\graduation-project\api\graduation-project-api\bin\Debug\net8.0\win-x86\it\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\graduation-project\api\graduation-project-api\bin\Debug\net8.0\win-x86\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\graduation-project\api\graduation-project-api\bin\Debug\net8.0\win-x86\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\graduation-project\api\graduation-project-api\bin\Debug\net8.0\win-x86\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\graduation-project\api\graduation-project-api\bin\Debug\net8.0\win-x86\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\graduation-project\api\graduation-project-api\bin\Debug\net8.0\win-x86\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\graduation-project\api\graduation-project-api\bin\Debug\net8.0\win-x86\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\graduation-project\api\graduation-project-api\bin\Debug\net8.0\win-x86\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\graduation-project\api\graduation-project-api\bin\Debug\net8.0\win-x86\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\graduation-project\api\graduation-project-api\bin\Debug\net8.0\win-x86\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\graduation-project\api\graduation-project-api\bin\Debug\net8.0\win-x86\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\graduation-project\api\graduation-project-api\bin\Debug\net8.0\win-x86\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\graduation-project\api\graduation-project-api\bin\Debug\net8.0\win-x86\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\graduation-project\api\graduation-project-api\bin\Debug\net8.0\win-x86\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\graduation-project\api\graduation-project-api\bin\Debug\net8.0\win-x86\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\graduation-project\api\graduation-project-api\bin\Debug\net8.0\win-x86\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\graduation-project\api\graduation-project-api\bin\Debug\net8.0\win-x86\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\graduation-project\api\graduation-project-api\bin\Debug\net8.0\win-x86\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\graduation-project\api\graduation-project-api\bin\Debug\net8.0\win-x86\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\graduation-project\api\graduation-project-api\bin\Debug\net8.0\win-x86\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\graduation-project\api\graduation-project-api\bin\Debug\net8.0\win-x86\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\graduation-project\api\graduation-project-api\bin\Debug\net8.0\win-x86\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\graduation-project\api\graduation-project-api\bin\Debug\net8.0\win-x86\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\graduation-project\api\graduation-project-api\bin\Debug\net8.0\win-x86\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\graduation-project\api\graduation-project-api\bin\Debug\net8.0\win-x86\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\graduation-project\api\graduation-project-api\bin\Debug\net8.0\win-x86\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\graduation-project\api\graduation-project-api\bin\Debug\net8.0\win-x86\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\graduation-project\api\graduation-project-api\bin\Debug\net8.0\win-x86\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\graduation-project\api\graduation-project-api\bin\Debug\net8.0\win-x86\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\graduation-project\api\graduation-project-api\bin\Debug\net8.0\win-x86\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\graduation-project\api\graduation-project-api\bin\Debug\net8.0\win-x86\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\graduation-project\api\graduation-project-api\bin\Debug\net8.0\win-x86\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\graduation-project\api\graduation-project-api\bin\Debug\net8.0\win-x86\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\graduation-project\api\graduation-project-api\bin\Debug\net8.0\win-x86\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\graduation-project\api\graduation-project-api\bin\Debug\net8.0\win-x86\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\graduation-project\api\graduation-project-api\bin\Debug\net8.0\win-x86\Microsoft.Data.SqlClient.SNI.dll
+D:\graduation-project\api\graduation-project-api\obj\Debug\net8.0\win-x86\Egyptian association of cieliac patients api.csproj.AssemblyReference.cache
+D:\graduation-project\api\graduation-project-api\obj\Debug\net8.0\win-x86\Egyptian association of cieliac patients api.GeneratedMSBuildEditorConfig.editorconfig
+D:\graduation-project\api\graduation-project-api\obj\Debug\net8.0\win-x86\Egyptian association of cieliac patients api.AssemblyInfoInputs.cache
+D:\graduation-project\api\graduation-project-api\obj\Debug\net8.0\win-x86\Egyptian association of cieliac patients api.AssemblyInfo.cs
+D:\graduation-project\api\graduation-project-api\obj\Debug\net8.0\win-x86\Egyptian association of cieliac patients api.csproj.CoreCompileInputs.cache
+D:\graduation-project\api\graduation-project-api\obj\Debug\net8.0\win-x86\Egyptian association of cieliac patients api.MvcApplicationPartsAssemblyInfo.cs
+D:\graduation-project\api\graduation-project-api\obj\Debug\net8.0\win-x86\Egyptian association of cieliac patients api.MvcApplicationPartsAssemblyInfo.cache
+D:\graduation-project\api\graduation-project-api\obj\Debug\net8.0\win-x86\Egyptian association of cieliac patients api.sourcelink.json
+D:\graduation-project\api\graduation-project-api\obj\Debug\net8.0\win-x86\staticwebassets.build.json
+D:\graduation-project\api\graduation-project-api\obj\Debug\net8.0\win-x86\staticwebassets.development.json
+D:\graduation-project\api\graduation-project-api\obj\Debug\net8.0\win-x86\staticwebassets\msbuild.Egyptian association of cieliac patients api.Microsoft.AspNetCore.StaticWebAssets.props
+D:\graduation-project\api\graduation-project-api\obj\Debug\net8.0\win-x86\staticwebassets\msbuild.build.Egyptian association of cieliac patients api.props
+D:\graduation-project\api\graduation-project-api\obj\Debug\net8.0\win-x86\staticwebassets\msbuild.buildMultiTargeting.Egyptian association of cieliac patients api.props
+D:\graduation-project\api\graduation-project-api\obj\Debug\net8.0\win-x86\staticwebassets\msbuild.buildTransitive.Egyptian association of cieliac patients api.props
+D:\graduation-project\api\graduation-project-api\obj\Debug\net8.0\win-x86\staticwebassets.pack.json
+D:\graduation-project\api\graduation-project-api\obj\Debug\net8.0\win-x86\scopedcss\bundle\Egyptian association of cieliac patients api.styles.css
+D:\graduation-project\api\graduation-project-api\obj\Debug\net8.0\win-x86\Egyptian.008E7B00.Up2Date
+D:\graduation-project\api\graduation-project-api\obj\Debug\net8.0\win-x86\Egyptian association of cieliac patients api.dll
+D:\graduation-project\api\graduation-project-api\obj\Debug\net8.0\win-x86\refint\Egyptian association of cieliac patients api.dll
+D:\graduation-project\api\graduation-project-api\obj\Debug\net8.0\win-x86\Egyptian association of cieliac patients api.pdb
+D:\graduation-project\api\graduation-project-api\obj\Debug\net8.0\win-x86\Egyptian association of cieliac patients api.genruntimeconfig.cache
+D:\graduation-project\api\graduation-project-api\obj\Debug\net8.0\win-x86\ref\Egyptian association of cieliac patients api.dll
+D:\graduation-project\api\graduation-project-api\bin\Debug\net8.0\win-x86\Egyptian association of cieliac patients api.staticwebassets.runtime.json

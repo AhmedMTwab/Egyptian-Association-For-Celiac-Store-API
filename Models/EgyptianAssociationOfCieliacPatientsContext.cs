@@ -378,12 +378,11 @@ public partial class EgyptianAssociationOfCieliacPatientsContext : DbContext
         });
 
 
-
         modelBuilder.Entity<Payment>(entity =>
         {
             entity.Property(e => e.PaymentId).ValueGeneratedOnAdd();
             entity.Property(e => e.PaymentType).IsFixedLength();
-            entity.HasOne(d => d.Order);
+            entity.HasMany(p => p.Orders).WithOne(d => d.Payment).OnDelete(DeleteBehavior.Cascade);
         });
 
         modelBuilder.Entity<Product>(entity =>
@@ -425,8 +424,9 @@ public partial class EgyptianAssociationOfCieliacPatientsContext : DbContext
             entity.HasOne(d => d.Patient).WithMany(p => p.Orders)
                 .OnDelete(DeleteBehavior.ClientCascade)
                 .HasConstraintName("FK_order_patient");
-        
-    });
+            entity.HasOne(d => d.Payment).WithMany(p => p.Orders).OnDelete(DeleteBehavior.Cascade);
+
+        });
         modelBuilder.Entity<Cart>(entity =>
         {
             entity.Property(e => e.CartId).ValueGeneratedOnAdd();

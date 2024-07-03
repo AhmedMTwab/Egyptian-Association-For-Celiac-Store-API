@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Egyptian association of cieliac patients api.props" />
+</Project>

@@ -35,11 +35,16 @@ public partial class Order
     [Column("shipment_phone")]
     public string ShipmentPhone { get; set; }
 
-   
+
     [Column("patient_id")]
     public int PatientId { get; set; }
+    [InverseProperty("Order")]
+    public virtual List<OrderProduct> OrderedProducts { get; set; }=new List<OrderProduct>();
+    [InverseProperty("Order")]
+    public virtual List<OrderMaterial> OrderedMaterials { get; set; }=new List<OrderMaterial>();
 
-
+    [Column("Payment_id")]
+    public int PaymentId { get; set; }
 
     [Column("Cart_id")]
     public int CartId { get; set; }
@@ -50,4 +55,6 @@ public partial class Order
 
     [ForeignKey("CartId")]
     public virtual Cart Cart { get; set; }
+    [ForeignKey("PaymentId")]
+    public virtual Payment Payment { get; set; } = null!;
 }

@@ -7,19 +7,18 @@ using Microsoft.EntityFrameworkCore;
 namespace Egyptian_association_of_cieliac_patients_api.Models;
 
 [Table("payment")]
+[PrimaryKey("PaymentId")]
+
 public partial class Payment
 {
-    [Key]
     [Column("payment_id")]
     public int PaymentId { get; set; }
 
     [Column("payment_type")]
     [StringLength(10)]
     public string PaymentType { get; set; } = null!;
-
-    [Column("total_paid", TypeName = "money")]
-    public decimal TotalPaid { get; set; }
-    public int OrderId { get; set; }
-    [ForeignKey("OrderId")]
-    public virtual Order Order { get; set; }
+    [InverseProperty("Payment")]
+    public virtual List<Order> Orders { get; set; } = new List<Order>();
 }
+
+

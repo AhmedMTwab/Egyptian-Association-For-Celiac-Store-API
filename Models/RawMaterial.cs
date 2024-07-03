@@ -33,7 +33,9 @@ public partial class RawMaterial
 
     [InverseProperty("Material")]
     public virtual ICollection<PatientRawmaterialVeiw> patients { get; set; } = new List<PatientRawmaterialVeiw>();
-   
+
     [InverseProperty("Material")]
-    public virtual ICollection<CartMaterialHave> Carts { get; set; }= new List<CartMaterialHave>();
+    public virtual ICollection<CartMaterialHave> Carts { get; set; } = new List<CartMaterialHave>();
+    [InverseProperty("Material")]
+    public virtual ICollection<OrderMaterial> Orders { get; set; } = new List<OrderMaterial>();
 }
