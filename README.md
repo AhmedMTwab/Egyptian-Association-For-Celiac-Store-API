@@ -1,44 +1,40 @@
-# 🏥 Egyptian Celiac Association — Management System
+# 🛍️ Egyptian Celiac Association — Store & E-Commerce API
 
-A full-stack .NET 8 platform built as a graduation project for the Egyptian Association for Celiac Patients. Consolidates 5+ operational workflows — inventory, medical appointments, patient records, insurance offers, and staff management — into a single system with role-based access control.
+A RESTful Web API built as part of the graduation project for the Egyptian Association for Celiac Patients. This API powers the e-commerce layer of the platform — handling product browsing, cart management, order placement, appointment booking with doctors and labs, and secure JWT-authenticated access for patients.
 
-> **Graduation Project** · Modern Academy for Engineering · Grade: **Excellent**
+> **Graduation Project** · Companion API to the [Management System](https://github.com/AhmedMTwab/Egyptian-Association-For-Celiac-Management-System) · Grade: **Excellent**
 
+[![API Docs](https://img.shields.io/badge/API%20Docs-Swagger-85EA2D?style=flat-square&logo=swagger&logoColor=black)](https://twabprojectapi.runasp.net/swagger/index.html)
 [![C#](https://img.shields.io/badge/C%23-.NET%208-512BD4?style=flat-square&logo=dotnet&logoColor=white)](https://dotnet.microsoft.com/)
-[![ASP.NET Core MVC](https://img.shields.io/badge/ASP.NET%20Core-MVC-512BD4?style=flat-square&logo=dotnet&logoColor=white)](https://dotnet.microsoft.com/)
 [![SQL Server](https://img.shields.io/badge/SQL%20Server-Database-CC2927?style=flat-square&logo=microsoftsqlserver&logoColor=white)](https://www.microsoft.com/sql-server)
 
 ---
 
 ## 🚀 Features
 
-- **Multi-Module Platform** — A single system replacing multiple disconnected manual processes
-- **Role-Based Access Control** — Admin, Doctor, Employee, and Patient roles with scoped permissions via ASP.NET Core Identity
-- **Inventory Management** — Track association and pharmacy products, stock levels, and categories
-- **Medical Appointments** — Patients book appointments with doctors and labs; staff manage schedules
-- **Patient Records** — Full patient profile management including medical history and insurance data
-- **Insurance Offers** — Manage and display medical insurance packages available to members
-- **MVC Frontend** — Server-rendered UI using ASP.NET Core MVC with Razor Views
-- **Authentication** — Cookie-based auth for MVC, with ASP.NET Core Identity managing users and roles
+- **JWT Authentication** — Secure token-based auth; all patient-facing endpoints require a valid Bearer token
+- **Product Browsing** — Patients browse association and pharmacy products with category filtering
+- **Order Management** — Full order lifecycle: create, view, and track orders
+- **Appointment Booking** — Book appointments with doctors and labs directly through the API
+- **DTO Pattern** — Clean separation between API contracts and domain models via DTOs
+- **Repository Pattern** — Data access abstracted behind interfaces for testability
+- **Swagger Documentation** — Full interactive API docs available live
 
 ---
 
-## 🏗️ Architecture & Structure
+## 🏗️ Structure
 
 ```
-├── Controllers/        # MVC Controllers — request routing and response
-├── Models/             # Domain entities (Patient, Doctor, Product, Appointment, etc.)
-├── ViewModels/         # View-specific models — separation from domain
-├── Views/              # Razor Views — server-rendered HTML
+├── Controllers/        # API endpoints — Products, Orders, Appointments, Auth
+├── DTO/                # Data Transfer Objects — request/response contracts
+├── Models/             # Domain entities — Product, Order, Appointment, Patient
 ├── Repositories/       # Data access layer — abstracts EF Core queries
-├── IdentityModels/     # Custom Identity user and role models
-├── Areas/
-│   └── Identity/       # Scaffolded Identity pages (Login, Register, etc.)
 ├── Migrations/         # EF Core database migrations
-└── wwwroot/            # Static assets (CSS, JS, images)
+├── wwwroot/images/     # Uploaded product images
+└── Program.cs          # App bootstrap, DI registration, middleware pipeline
 ```
 
-**Pattern:** MVC with Repository pattern. Controllers are kept thin — business logic lives in repositories and service methods, not in action methods.
+This is a single-project Web API — no layered architecture separation. Business logic lives in repositories, controllers handle routing and validation.
 
 ---
 
@@ -46,48 +42,73 @@ A full-stack .NET 8 platform built as a graduation project for the Egyptian Asso
 
 | Category | Technology |
 |---|---|
-| Framework | ASP.NET Core MVC (.NET 8) |
-| Frontend | Razor Views, Bootstrap, JavaScript |
+| Framework | ASP.NET Core Web API (.NET 8) |
+| Auth | JWT Bearer Tokens |
 | ORM | Entity Framework Core |
 | Database | SQL Server |
-| Auth | ASP.NET Core Identity (cookie-based) |
-| Storage | Firebase (media/file storage) |
-| Architecture | MVC + Repository Pattern |
+| Mapping | DTOs (manual mapping) |
+| API Docs | Swagger / Swashbuckle |
+| Architecture | Repository Pattern |
 
 ---
 
-## 👥 User Roles & Permissions
+## 🔐 Authentication
 
-| Role | Access |
-|---|---|
-| **Admin** | Full access — manage all modules, users, roles, and content |
-| **Doctor** | View and manage appointments and patient records |
-| **Employee** | Manage inventory, process orders, handle insurance |
-| **Patient** | Book appointments, view own records and insurance offers |
+All patient-facing endpoints require a JWT Bearer token.
+
+1. **Register** — `POST /api/Auth/register`
+2. **Login** — `POST /api/Auth/login` → returns a JWT token
+3. **Authorize** — Include the token in every request header:
+   ```
+   Authorization: Bearer <your-token>
+   ```
+
+In Swagger UI, click the **Authorize** button at the top right and paste your token to test protected endpoints interactively.
 
 ---
 
-## 📋 Modules
+## 📚 API Endpoints
 
-### 🏪 Inventory & Store
-- Manage association products and pharmacy items
-- Track stock levels and product categories
-- Process product orders
+### Authentication
+| Method | Endpoint | Auth | Description |
+|---|---|---|---|
+| `POST` | `/api/Auth/register` | Public | Register a new patient account |
+| `POST` | `/api/Auth/login` | Public | Login and receive a JWT token |
 
-### 🩺 Medical Appointments
-- Patients search and book appointments with available doctors and labs
-- Doctors manage their schedules and appointment history
-- Staff track upcoming and completed appointments
+### Products
+| Method | Endpoint | Auth | Description |
+|---|---|---|---|
+| `GET` | `/api/Products` | Public | Browse all available products |
+| `GET` | `/api/Products/{id}` | Public | Get product details |
+| `GET` | `/api/Products/category/{id}` | Public | Filter products by category |
 
-### 👤 Patient Management
-- Full patient profiles with medical history
-- Insurance policy assignments
-- Document uploads via Firebase storage
+### Orders
+| Method | Endpoint | Auth | Description |
+|---|---|---|---|
+| `POST` | `/api/Orders` | 🔒 Required | Place a new order |
+| `GET` | `/api/Orders` | 🔒 Required | Get current patient's orders |
+| `GET` | `/api/Orders/{id}` | 🔒 Required | Get order details |
 
-### 💊 Insurance Offers
-- Admin creates and publishes insurance packages
-- Patients browse and apply for coverage
-- Staff process applications
+### Appointments
+| Method | Endpoint | Auth | Description |
+|---|---|---|---|
+| `GET` | `/api/Appointments/doctors` | Public | List available doctors |
+| `GET` | `/api/Appointments/labs` | Public | List available labs |
+| `POST` | `/api/Appointments/book` | 🔒 Required | Book an appointment |
+| `GET` | `/api/Appointments/my` | 🔒 Required | View patient's appointments |
+
+---
+
+## 🔗 Relationship to the Management System
+
+This API and the [Management System MVC app](https://github.com/AhmedMTwab/Egyptian-Association-For-Celiac-Management-System) share the same database. They serve different audiences:
+
+| | Management System (MVC) | Store API |
+|---|---|---|
+| **Users** | Admins, Doctors, Employees | Patients |
+| **Interface** | Server-rendered web UI | RESTful API (consumed by clients) |
+| **Auth** | Cookie-based (ASP.NET Identity) | JWT Bearer tokens |
+| **Purpose** | Manage the platform | Patient-facing e-commerce & bookings |
 
 ---
 
@@ -96,14 +117,13 @@ A full-stack .NET 8 platform built as a graduation project for the Egyptian Asso
 ### Prerequisites
 - .NET 8 SDK
 - SQL Server
-- Firebase project (for file storage — optional for local dev)
 
 ### Setup
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/AhmedMTwab/Egyptian-Association-For-Celiac-Management-System.git
-   cd Egyptian-Association-For-Celiac-Management-System
+   git clone https://github.com/AhmedMTwab/Egyptian-Association-For-Celiac-Store-API.git
+   cd Egyptian-Association-For-Celiac-Store-API
    ```
 
 2. **Configure the connection string** in `appsettings.json`
@@ -111,6 +131,12 @@ A full-stack .NET 8 platform built as a graduation project for the Egyptian Asso
    {
      "ConnectionStrings": {
        "DefaultConnection": "Server=.;Database=CeliacAssociationDb;Trusted_Connection=True;"
+     },
+     "Jwt": {
+       "Key": "YourSecretKeyHere",
+       "Issuer": "CeliacStoreAPI",
+       "Audience": "CeliacPatients",
+       "DurationInMinutes": 60
      }
    }
    ```
@@ -127,27 +153,20 @@ A full-stack .NET 8 platform built as a graduation project for the Egyptian Asso
    dotnet run
    ```
 
-5. **Access the app** at `https://localhost:5001` — register an account or use the seeded admin credentials (see below)
+5. **Open Swagger UI** at `https://localhost:5001` to explore and test all endpoints
 
-### Seeded Admin Account
-```
-Email:    admin@celiac.com
-Password: Admin@123
-```
+---
+
+## 📝 Notes
+
+> **Graduation Project Context:** This API was built in 2024 as part of my graduation project. It uses a flat single-project structure rather than Clean Architecture. If I were to rebuild it today, I would apply layered architecture, add FluentValidation, and write unit tests for the service/repository layer.
 
 ---
 
 ## 📚 Documentation
 
-### Graduation Book
-The complete graduation project documentation is available as a PDF:
-- **[Graduation Book.pdf](https://drive.google.com/file/d/1B6xYUrrWza4_Z_OvBsRuGPD2xVPjGefE/view?usp=sharing)** - Full project documentation, analysis, and implementation details
-
----
-
-## ⚠️ Project Context
-
-This was built as a graduation project in 2024. It represents my earlier work and was designed to solve a real operational problem for the association. The architecture reflects the MVC monolith approach taught at the time — if I were to rebuild it today, I would separate the API layer, apply Clean Architecture, and add proper unit test coverage.
+Full graduation project documentation:
+**[📄 Graduation Book (PDF)](https://drive.google.com/file/d/1B6xYUrrWza4_Z_OvBsRuGPD2xVPjGefE/view?usp=sharing)**
 
 ---
 
